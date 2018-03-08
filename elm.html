@@ -6,7 +6,6 @@
 	<link rel="stylesheet" type="text/css" href="elm.css">
 	<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">
 	<link rel="stylesheet" type="text/css" href="swiper-4.1.6.min.css">
-	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=qXsVf37U7IchmZZhVzdLA4f0qX11mhW3"></script>
 	<script type="text/javascript" src="js/swiper-4.1.6.min.js"></script>
 	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
 	<script src="js/vue.js"></script>
@@ -14,6 +13,7 @@
 </head>
 <body>
 <div id="app">
+    <article>
 	<div id="headwrap">
 		<div class="top">
 
@@ -113,6 +113,7 @@
 		</div>
 	  <!-- </main> -->
 	</div>
+	</article>
 	<div id="footwrap">
 		<a href="" class="active">
 			<i class="iconfont icon-changyonglogo40"></i>
@@ -172,22 +173,13 @@
 
 
 
+    
+    $("article").scroll(function(){
+    	if($("article").scrollTop()>39 ){
+    		$(".search").css("top",0)
+    	}else{
+    		$(".search").css("top",39)
 
-
-    var geolocation = new BMap.Geolocation();
-	geolocation.getCurrentPosition(function(r){
-		if(this.getStatus() == BMAP_STATUS_SUCCESS){
-			alert('您的位置：'+r.point.lng+','+r.point.lat);
-
-			var geoc = new BMap.Geocoder(); 
-			geoc.getLocation(r.point, function(rs){
-				var addComp = rs.addressComponents;
-				console.log(addComp);
-				$(".add").html(addComp.city+""+addComp.district+""+addComp.street);
-			});  
-		}
-		else {
-			alert('failed'+this.getStatus());
-		}        
-	},{enableHighAccuracy: true})
+    	}
+    })
 </script>
