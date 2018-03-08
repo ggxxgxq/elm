@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0" />
+	<link rel="stylesheet" type="text/css" href="elm.css">
+	<link rel="stylesheet" type="text/css" href="iconfont/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="swiper-4.1.6.min.css">
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=qXsVf37U7IchmZZhVzdLA4f0qX11mhW3"></script>
+	<script type="text/javascript" src="js/swiper-4.1.6.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+	<script src="js/vue.js"></script>
+	<title>Document</title>
+</head>
+<body>
+<div id="app">
+	<div id="headwrap">
+		<div class="top">
+
+			<i class="iconfont icon-htmal5icon14"></i>
+			<label class="add">正义路北京</label>
+			<i class="iconfont icon-xiala"></i>
+		</div>
+		<div class="search">
+		    <section>
+			<input type="text" placeholder="搜索商家、商品名称">
+			<i class="iconfont icon-search"></i>
+			</section>
+		</div>
+	</div>
+	<div id="mainwrap">
+		<div class="banner">
+			<a href=""></a>
+		</div>
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	      <div class="swiper-slide swiper-slide-active">
+	      	 <div class="list">
+			   <section>
+			   	   <a href="" v-for="item in mealList">
+						<img v-bind:src="item.src">
+						<span>{{item.name}}</span>
+					</a>				
+			   </section>   
+			</div>
+	      </div>
+	       <div class="swiper-slide swiper-slide-next">
+      		 <div class="list">
+		       	  <section>
+		       	  	  <a href="" v-for="item in mealNext">
+							<img v-bind:src="item.src">
+							<span>{{item.name}}</span>
+						</a>
+		       	  </section>
+	       	  </div>
+	       </div>
+	    </div>
+	    <!-- Add Pagination -->
+	    <div class="swiper-pagination swiper-pagination-bullets">
+			<span class="swiper-pagination-bullet"></span>
+			<span class="swiper-pagination-bullet"></span>
+		</div> 
+	  </div>
+		<nav>
+			<img src="img/nav.png">
+		</nav>
+		<div class="combo">
+			<div class="msg">
+				<h3>品质套餐</h3>
+				<div class="match">搭配齐全吃的好</div>
+				<div class="buy">立即抢购>></div>
+				<img src="img/del.png">
+			</div>
+		</div>
+		<div class="intro">
+			推荐商家
+		</div>
+        <!-- <main id="app"> -->
+		<div class="content" v-for="item in shopList">
+		     <section class="restaurant fir">
+		        <aside>
+		     	<div class="sale_name">
+		     		<div class="sale_piv">
+		     			<img v-bind:src="item.src">
+		     		</div>
+		     	</div>
+		     	<div class="detail">
+		     		<article class="shop_name"><h3>{{item.name}}</h3></article>
+		     		<article class="sales">
+		     			<div class="month">
+		     				 <img src="img/count.jpg">
+		     				<span class="count">{{item.count}}</span>
+		     				<span>月售592单</span>
+		     			</div>
+		     			<div class="type">
+		     				蜂鸟专送
+		     			</div>
+		     		</article>
+		     		<article class="bill">
+		     			<div class="price">
+		     				<span>￥20起送|</span>
+		     				<span>配送费7.5</span>
+		     			</div>
+		     			<div class="miles">2.67km/23分钟</div>
+		     		</article>
+		     	</div>
+		     	</aside>
+		     	<div class="discount">
+		     		<div class="news"><span>首</span><span>新用户下单立减17元</span></div>
+		     		<div class="minus"><span>减</span><span>满25减5；满35减7；满55减10</span></div>
+		     	</div>
+		     </section>
+		</div>
+	  <!-- </main> -->
+	</div>
+	<div id="footwrap">
+		<a href="" class="active">
+			<i class="iconfont icon-changyonglogo40"></i>
+			<p>首页</p>
+		</a>
+		<a href="">
+			<i class="iconfont icon-faxian"></i>
+			<p>发现</p>
+		</a>
+		<a href="">
+			<i class="iconfont icon-weibiaoti-"></i>
+			<p>订单</p>
+		</a>
+		<a href="">
+			<i class="iconfont icon-search"></i>
+			<p>我的</p>
+		</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
+<script type="text/javascript"> 
+	var vm = new Vue({
+		el:"#app",
+		data:{
+            shopList:[
+               {name:"绝味煎饼(保利芳园店)",src:"img/del.png",count:"4.7",},
+               {name:"许氏麻辣香锅",src:"img/xiangguo.jpeg",count:"4.5",},
+               {name:"东北大馅饺子",src:"img/jiaozi.jpeg",count:"4.7",},
+               {name:"许氏过桥米线(沙河店)",src:"img/fish.jpeg",count:"4.3",}
+            ],
+            mealList:[
+                {name:"美食",src:"img/food.png"},
+                {name:"晚餐",src:"img/lunch.png"},
+                {name:"商超便利",src:"img/market.png"},
+                {name:"果蔬生鲜",src:"img/orange.png"},
+                {name:"大牌5折",src:"img/count.png"},
+                {name:"医药健康",src:"img/med.png"},
+                {name:"浪漫鲜花",src:"img/flo.png"},
+                {name:"麻辣烫",src:"img/hot.png"},
+                {name:"地方菜系",src:"img/loacl.png"},
+                {name:"披萨意面",src:"img/nodules.png"},
+            ],
+            mealNext:[
+                {name:"地方小吃",src:"img/market.png"},
+                {name:"美食",src:"img/count.png"}
+              
+            ],
+		}
+	})
+	 var swiper = new Swiper('.swiper-container', {
+	      pagination: {
+	        el: '.swiper-pagination',
+	      },
+    });
+
+
+
+
+
+    var geolocation = new BMap.Geolocation();
+	geolocation.getCurrentPosition(function(r){
+		if(this.getStatus() == BMAP_STATUS_SUCCESS){
+			alert('您的位置：'+r.point.lng+','+r.point.lat);
+
+			var geoc = new BMap.Geocoder(); 
+			geoc.getLocation(r.point, function(rs){
+				var addComp = rs.addressComponents;
+				console.log(addComp);
+				$(".add").html(addComp.city+""+addComp.district+""+addComp.street);
+			});  
+		}
+		else {
+			alert('failed'+this.getStatus());
+		}        
+	},{enableHighAccuracy: true})
+</script>

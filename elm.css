@@ -1,0 +1,344 @@
+*{margin:0;padding:0;box-sizing: border-box;}
+html{fontsize:26.67vw}
+ul,li,ol{list-style:none;}
+a{text-decoration:none;color:#b8b8b8;}
+img{border:0;}
+h1,h2,h3,h4,h5,h6,strong{font-size:.16rem;font-weight:normal;}
+b{font-weight:normal;}
+i,em{font-style:normal;}
+body{font-size:.12rem;font-family:"微软雅黑";}
+.left{float:left;}
+.right{float:right;}
+.clearfix{content:".";clear:both;display:block;height:0;overflow:hidden;visibility: hidden}
+
+html{
+	font-size: 26.67vw;
+	width: 100%;
+    height: 100% ;
+}
+body{
+	width: 100%;
+    height: 100% ;
+    display:flex;
+    flex-direction:column;
+}
+#app{
+	width: 100%;
+	height: 100%;
+}
+#headwrap{
+	width: 100%;
+	height:.8rem;
+	padding: 0 .1rem;
+	background: #0092ff;
+}
+.top{
+	height: .39rem;
+	line-height: .31rem;
+	padding-top: 0.08rem;
+	font-size: .14rem;
+	font-weight: bolder;
+	color: #fff;
+}
+.top .icon-htmal5icon14{
+	font-size: 0.14rem;
+}
+.top .icon-xiala{
+	font-size: 0.07rem;
+}
+.top label{
+	margin: 0 0.14rem 0 0.05rem ;
+}
+.search{
+	height: .41rem;
+	line-height: .41rem;
+	padding: 0 .12rem;
+	text-align: center;
+}
+.search section{
+	position: relative;
+}
+.search input{
+	width:100%;
+	height: .31rem;
+	font-size: .14rem;
+	line-height: .31rem;
+	background: #fff;
+	color: #999;
+	text-align: center;
+	outline: none;
+}
+.search input::-webkit-input-placeholder{
+	color: #999;
+	font-size: .14rem
+}
+.search .icon-search{
+	color: #999;
+	display: block;
+	width: .2rem;
+	height: .2rem;
+	font-size: .12rem;
+	position: absolute;
+    top:.01rem;
+    left: .86rem;
+}
+#mainwrap{
+	flex:1;
+	width: 100%;
+	/* background: #ccc; */
+	overflow: auto;
+	 background:#fafafa; 
+}
+.banner{
+	width: 100%;
+	height: .88rem;
+}
+.banner a{
+	display: block;
+	height: .88rem;
+	background: url(img/banner.jpg) no-repeat ;
+	background-size: 100%;
+}
+.list{
+	width: 100%;
+	height: 1.6rem;
+	background: #fff;
+}
+.list section{
+	width: 100%;
+	height: 1.6rem;
+	display: flex;
+	flex-wrap:wrap;
+	align-content:flex-start;  	
+}
+/* .list .swiper-pagination{
+	position: absolute;
+	bottom: .1rem;
+    left: 50%;
+    transform: translateX(-50%);
+} */
+.list section a{
+	display: block;
+	/* float: left; */
+	width: 20%;
+	color: #666666;
+	height: .65rem;
+	padding-top: .15rem;
+	text-align: center;
+}
+.list section a img{
+	display: block;
+	border:0;
+	margin:0 auto;
+	width: .32rem;
+	height:.32rem ; 
+	/* margin-bottom: .11rem; */
+}
+.list section a span{
+    font-size: .11rem
+}
+/* nav */
+nav{
+	padding:0 .1rem;
+}
+nav img{
+	display: block;
+     width: 100%; 
+    height: .7rem;
+}
+/* combo */
+.combo{
+	padding:0 2.267vw;
+	margin-bottom:.08rem; 
+}
+.combo .msg{
+	padding:3.2vw 0 0 4vw;
+	z-index:1;
+	position: relative;
+	height: 29.333333vw;
+	background: linear-gradient(0deg,#f4f4f4 5%,#fafafa 95%);
+	}
+.combo .msg	h3{
+	font-size: .17rem;
+    font-weight: 700;
+    margin-bottom: .133333rem;
+    margin-bottom: 1.333333vw;
+    color: #333;
+	}
+.combo .msg	.match{
+    font-size: .13 rem;
+    color: #777;
+    margin-bottom: .24rem;
+    margin-bottom: 2.4vw;
+}
+.combo .msg	.buy{
+    font-size: .11rem;
+    color: #af8260;
+    font-weight: 700;
+}
+.combo img{
+	display: block;
+	width: 50%;
+	position: absolute;
+	right: 0;
+	top:0;
+}
+.intro{
+	display: flex;
+	width: 100%;
+    justify-content: center;
+    align-content:center;
+    height: 9.6vw;
+    line-height: 9.6vw;
+    font-size: .17rem;
+    color: #000;
+    background-color: #fff;
+}
+.intro::after{
+   content:"—";
+   color:#999;
+   font-weight: bold;
+   text-indent: .05rem;
+}
+.intro::before{
+   content:"—";
+   color:#999;
+   font-weight: bold;
+   margin-right:0.05rem; 
+}
+.restaurant{
+	position: relative;
+    border-bottom: .133333vw solid #eee;
+    background-color: #fff;
+    color: #666;
+    padding: 4vw 0;
+    line-height: normal;
+}
+.restaurant aside{
+   display: flex;
+}
+.restaurant .sale_name{
+    display: flex;
+    justify-content: flex-start;
+    /* -webkit-box-pack: start; */
+    align-items: stretch;
+    padding: 0 2.666667vw;
+    color: #666;
+/*     padding: 4vw 0;
+font-size: .2rem;
+line-height: normal; */
+}
+.restaurant .sale_name .sale_piv{
+	width: 17.333333vw;
+    height: 17.333333vw;
+}
+.restaurant .sale_name .sale_piv img{
+	display: block;
+	width:100%;
+    height: 100%;
+    border-radius: .533333vw;
+    border: .133333vw solid rgba(0,0,0,.08);
+}
+.restaurant .detail{
+	flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    padding-left: 2.666667vw;
+    border-bottom:1px dashed #ccc; 
+}
+.restaurant .detail article{
+	display: flex;
+}
+.restaurant .detail .shop_name h3{
+    color: #333;
+    font-weight: 700;
+    font-size: .17rem;
+    overflow: hidden;
+}
+.restaurant .detail .sales{
+	display: flex;
+	justify-content:space-between;
+	color: #666;
+    font-size: .11rem;
+}
+.detail .sales .month img{
+    width: 14.933333vw;
+    height: 2.666667vw;
+    overflow: hidden;
+}
+.restaurant .detail .sales .month .count{
+    margin: 0 1.066667vw;
+
+}
+.restaurant .detail .sales .type{
+    color: #fff;
+    background: #0093ff;
+    border-radius: .02rem;
+}
+.detail .bill{
+	display: flex;
+    justify-content:space-between;
+    position: relative;
+    font-size: .11rem;
+}
+.detail .bill .miles{
+	color:#999 ;
+}
+.restaurant .discount{
+	padding-left: 24.666667vw;
+	padding-top: .12rem;
+    color: #666;
+    font-size: .293333rem;
+    line-height: normal;
+    padding-right: 2.666667vw;
+    overflow: hidden;
+}
+.discount div{
+    display: flex;
+    align-items: center;
+    padding-left: .12vw;
+    font-size: .11rem;
+    line-height: 4.8vw;
+}
+.discount div span{
+	 display: block;
+	 border-radius: .01rem;
+}
+.discount .news span:first-child{
+     width: 3.466667vw; 
+     background: #70bc46;
+     color: #fff;
+     margin-right: .05rem;
+}
+.discount .minus span:first-child{
+     width: 3.466667vw; 
+     background: #f07373;
+     color: #fff;
+     margin-right: .05rem;
+}
+#footwrap{
+	width: 100%;
+	height:.43rem;
+	display: flex;
+	
+
+}
+#footwrap .iconfont{
+	font-size: .42rem;
+}
+
+#footwrap a{
+	display: block;
+	width: 50%;
+	height: .23rem;
+	text-align: center;
+	color: #8e8e93;
+	font-size: .2rem;
+    transform:scale(0.5);
+}
+
+#footwrap .active{
+	color: #30a2ff;
+	font-weight: bolder;
+}
